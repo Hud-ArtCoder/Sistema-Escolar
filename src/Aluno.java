@@ -87,7 +87,51 @@ public class Aluno {
 
     }
 
-    public void verificarMaiorIdade
+    public void verificarMaiorIdade(){
+        if (this.idadeAluno > 18) {
+            System.out.println("Aluno é maior de idade e pode participar de cursos noturnos.");
+        }else {
+            System.out.println("Aluno é menor de idade e não pode participar de cursos noturnos.");
+        }
+    }
+
+    public void cadastrarNotas(double nota1, double nota2){
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        System.out.println("Aluno Cadastrado com Sucesso");
+        System.out.println("Aluno Cadastrado com Sucesso");
+    }
+
+    public double calcularMedia(){
+        return (this.nota1 + this.nota2) / 2;
+    }
+
+    public void verificarAprovacao() {
+        if (this.nota1 == 0.0 && this.nota2 == 0.0) {
+            System.out.println("Notas não cadastradas.");
+            return;
+        }
+
+        double media = calcularMedia();
+
+        if (media >= 6.0) {
+            System.out.println("Aprovado");
+        } else {
+            System.out.println("Reprovado");
+        }
+    }
+
+    public void exibirInformacoes (){
+        System.out.println("Nome: " + this.nomeAluno);
+        System.out.println("Idade: " + this.idadeAluno);
+        System.out.println("Curso: " + this.curso);
+        System.out.println("Notas: " + this.nota1);
+        System.out.println("Notas: " + this.nota2);
+        System.out.println("Media: " + this.calcularMedia());
+    }
+
+
+
 
 
 
